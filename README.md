@@ -40,14 +40,27 @@ Make sure the data file is here:
 data/CTMCV1.zip
 ```
 
-The script will automatically extract it.
+The scripts will automatically extract it.
 
 ---
 
 ## Running
 
-Run the training script:
+Run the full training script (basically the same as notebook)
 
 ```bash
-python src/cmsc472_final.py
+python3 src/cmsc472_final.py
+```
+
+
+Alternatively, to run just the models:
+
+```bash
+python3 src/train.py
+```
+
+And then to generate the figures:
+
+```bash
+python3 experiments/figures.py
 ```

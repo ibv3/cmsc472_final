@@ -39,13 +39,23 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
-
 CHECKPOINT_DIR  = "/results/models/checkpoints"
 CHECKPOINT_PATH = os.path.join(CHECKPOINT_DIR, "best_model.pt")
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
 subprocess.run(["unzip", "data/CTMCV1.zip", "-d", "data"])
 
+SEED = 42
+
+torch.manual_seed(SEED)
+np.random.seed(SEED)
+
+if torch.cuda.is_available():
+    torch.cuda.manual_seed(SEED)
+    torch.cuda.manual_seed_all(SEED)
+
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
 
 
 ''' Setup '''
