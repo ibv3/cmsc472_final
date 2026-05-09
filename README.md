@@ -2,6 +2,8 @@
 
 A deep learning pipeline for classifying cell microscopy images using ResNet18 and PyTorch.
 
+Expected runtime: 2-3 hours
+
 ---
 
 ## Features
