@@ -2,7 +2,7 @@
 
 A deep learning pipeline for classifying cell microscopy images using ResNet18 and PyTorch.
 
-Expected runtime: 2-3 hours
+Expected runtime: 2-3 hours on single NVIDIA T4 GPU (Google Colab)
 
 ---
 
